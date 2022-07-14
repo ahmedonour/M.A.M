@@ -8,20 +8,27 @@ html
 		link(rel="manifest" href="/manifest.json")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
 	body
-		img#svges(src="/img/ilus.svg" type="image/svg+xml" alt="logo")
+		//- img#svges(src="/img/ilus.svg" type="image/svg+xml" alt="logo")
 		.loader
 			div
 			h1 M.A.M
 
-		nav
+		header 
 			img(src="/img/Logo.png") 
 			p Site
 
 			.navDots
-				i.fas.fa-ellipsis-v(aria-hidden="true")
-				//- a(href="/") Home
-				//- a(href="/about") About
-				//- a(href="/contact") Contact
+				input#check(type="checkbox" name="check")
+				label(for="check")
+				i.fas.fa-ellipsis-v
+				div.navbtn
+					label(for="check")
+					i.fa-regular.fa-circle-xmark
+					label(for="#")  01
+					a.button(href="#") DEPT
+					label(for="#")  02
+					a.button(href="#") OREDERS
+					
 				
 		.centerContent
 
@@ -42,6 +49,11 @@ html
 							td= d.count
 							td= d.title
 							td= d.id
+		.addBtn 
+			i.fas.fa-plus(aria-hidden="true")
+			//- a(href="/add") Add
+			//- a(href="/about") About
+			//- a(href="/contact") Contact
 		script.
 			$(window).on('load',function(){
 				$('.loader').fadeOut(1000);
