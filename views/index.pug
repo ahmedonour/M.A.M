@@ -8,6 +8,7 @@ html
 		link(rel="manifest" href="/manifest.json")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
 	body
+		img#svges(src="/img/ilus.svg" type="image/svg+xml" alt="logo")
 		.loader
 			div
 			h1 M.A.M
@@ -15,23 +16,32 @@ html
 		nav
 			img(src="/img/Logo.png") 
 			p Site
-		.center
-			form(action="/add" method="post")
-				input(type='text' name='title' placeholder='كلمات')
-				input(type='number' name='count' placeholder='أرقام')
-				button(type='submit') حفظ
-			table
-				tr
-					th التاريخ
-					th السعر
-					th ملاحظة
-					th الرقم
-				each d in data
+
+			.navDots
+				i.fas.fa-ellipsis-v(aria-hidden="true")
+				//- a(href="/") Home
+				//- a(href="/about") About
+				//- a(href="/contact") Contact
+				
+		.centerContent
+
+			.center
+				form(action="/add" method="post")
+					input(type='text' name='title' placeholder='كلمات')
+					input(type='number' name='count' placeholder='أرقام')
+					button(type='submit') حفظ
+				table
 					tr
-						td= d.date
-						td= d.count
-						td= d.title
-						td= d.id
+						th التاريخ
+						th السعر
+						th ملاحظة
+						th الرقم
+					each d in data
+						tr
+							td= d.date
+							td= d.count
+							td= d.title
+							td= d.id
 		script.
 			$(window).on('load',function(){
 				$('.loader').fadeOut(1000);

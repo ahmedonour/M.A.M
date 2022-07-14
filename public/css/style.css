@@ -5,19 +5,38 @@
 	--ff-arabic: 'Aref Ruqaa', serif;
 	--ff-english:  'Major Mono Display', monospace;
 	/* Colors */
-	--clr-primary: #000;
-	--clr-primary-white: #fff;
+	--clr-primary: #ffcf53;
+	--clr-primary-liter: #ffffa8;
+	--clr-primary-green: #028b7e;
+	/* Neuter */
+	--clr-neuter-black: #000;
+	--clr-neuter-gray: #595959;
+	--clr-neuter-white: #fff;
 	/* Font Size */
 	--fs-small: 1rem;
 	--fs-medium: 1.5;
 	--fs-semi-medium: 2rem;
 	--fs-big: 3rem;
+	/* Box-Shadow */
+	--bs-wide: 10px 10px 4px rgba(0, 0, 0, 0.25);
+	--bs-blur: 0px -7px 20px rgba(0, 0, 0, 0.25);
+	--bs-input: 7px 7px 4px rgba(0, 0, 0, 0.25);
 }
 
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+body{
+	background-color: var(--clr-primary);
+}
+body #svges{
+	width: 800px;
+	height: 800px;
+	position: absolute;
+	left: 30%;
+	z-index: -1;
 }
 .contents{
 	display: none;
@@ -58,7 +77,7 @@
 } 
 nav{
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	height: 200px;
 }
@@ -66,6 +85,8 @@ nav img{
 	width: 50%;
 }
 nav p{
+	background-color: var(--clr-neuter-black);
+	color: var(--clr-neuter-white);
 	font-family: var(--ff-english);
 	margin: 1rem;
 	font-size: 2rem;
@@ -73,14 +94,36 @@ nav p{
 	top: 100px;
 	left: 60%;
 }
+nav .navDots{
+	background-color: var(--clr-primary-liter);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+nav .navDots i{
+	width: 80px;
+	height: 80px;
+}
+.centerContent{
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .center{
-	height: 100vh;
-	width: 95vw;
-	
+	height: 100%;
+	width: 90vw;
+	background-color: var(--clr-primary-liter);
 	font-size: var(--fs-semi-medium);
+	border-radius: 100px;
+	padding: 4rem;
 }
 .center form{
-	display: flex;
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
