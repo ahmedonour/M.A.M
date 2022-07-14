@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+:root{
+	/* Font Family */
+	--ff-arabic: 'Aref Ruqaa', serif;
+	--ff-english:  'Major Mono Display', monospace;
+	/* Colors */
+	--clr-primary: #000;
+	--clr-primary-white: #fff;
+	/* Font Size */
+	--fs-small: 1rem;
+	--fs-medium: 1.5;
+	--fs-semi-medium: 2rem;
+	--fs-big: 3rem;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.contents{
+	display: none;
+}
+.loader{
+	height:100vh;
+	width:100vw;
+	overflow:hidden;
+	background-color: var(--clr-primary);
+	position: fixed;
+	z-index: 2;
+}
+.loader h1{
+	color: var(--clr-primary-white);
+	font-size: 5rem;
+	font-family: var(--ff-english);
+	text-align: center;
+	margin-top: 34% ;
+}
+.loader>div{
+	height:100px;
+	width:100px;
+	border:15px solid var(--clr-primary-white);
+	border-top-color: var(--clr-primary);
+	position:absolute;
+	margin:auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	border-radius:50%;
+	animation:spin 1.5s infinite linear;
+}
+@keyframes spin{
+	100%{
+		transform:rotate(360deg);
+	}
+} 
+nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+nav img{
+	width: 50%;
+}
+nav p{
+	font-family: var(--ff-english);
+	margin: 1rem;
+	font-size: 2rem;
+	position: absolute;
+	top: 100px;
+	left: 60%;
+}
+.center{
+	height: 100vh;
+	width: 95vw;
+	
+	font-size: var(--fs-semi-medium);
+}
+.center form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--fs-semi-medium);
+}
+
+.center form input{
+	width: 80vw;
+	height: 100px;
+	border: none;
+	font-size: 4rem;
+	outline: none;
+	border-radius: 50px;
+	background-color: white;
+	color: black;
+	padding: 2rem;
+	margin: 1.5rem;
+	font-family: var(--ff-arabic);
+	text-align: right;
+	box-shadow: 4px 4px 5px 0px #000;
+}
+.center form button{
+	width: 80vw;
+	height: 100px;
+	border: 5px solid var(--clr-primary-white);
+	font-size: 3rem;
+	outline: none;
+	border-radius: 50px;
+	font-family: var(--ff-arabic);
+	text-align: center;
+}
+.center form button:hover{
+	background-color: green;
+	color: var(--clr-primary-white);
+	cursor: pointer;
+}
+table{
+	overflow : scroll;
+	font-family: var(--ff-arabic);
+	font-size: var(--fs-semi-medium);
+	text-align: center;
+}
+
+table tr td{
+	width: 25%;
+}

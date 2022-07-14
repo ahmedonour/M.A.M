@@ -1,0 +1,17 @@
+{
+  "name": "m.a.m",
+  "version": "1.0.0",
+  "description": "a number traking app",
+  "main": "index.js",
+  "scripts": {
+    "ono": "nodemon index.js"
+  },
+  "author": "Ahmed Onour",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.0.8"
+  }
+}

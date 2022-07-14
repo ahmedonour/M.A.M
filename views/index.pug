@@ -1,0 +1,43 @@
+html
+	head
+		title M.A.M
+		link(rel="stylesheet" href="/css/style.css")
+		link(rel="shortcut icon" href="/img/favicon-0-white.png" type="image/x-icon")
+		script(src="https://kit.fontawesome.com/f3c7bd6f07.js" crossorigin="anonymous")
+		//script(src= "loader.js")	
+		link(rel="manifest" href="/manifest.json")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+	body
+		.loader
+			div
+			h1 M.A.M
+
+		nav
+			img(src="/img/Logo.png") 
+			p Site
+		.center
+			form(action="/add" method="post")
+				input(type='text' name='title' placeholder='كلمات')
+				input(type='number' name='count' placeholder='أرقام')
+				button(type='submit') حفظ
+			table
+				tr
+					th التاريخ
+					th السعر
+					th ملاحظة
+					th الرقم
+				each d in data
+					tr
+						td= d.date
+						td= d.count
+						td= d.title
+						td= d.id
+		script.
+			$(window).on('load',function(){
+				$('.loader').fadeOut(1000);
+				$('.contents').fadeln(1000);
+			});
+		script.
+			if ('serviceWorker' in navigator){
+				navigator.serviceWorker.register('/service-worker.js');
+			};
