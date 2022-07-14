@@ -8,6 +8,7 @@
 	--clr-primary: #ffcf53;
 	--clr-primary-liter: #ffffa8;
 	--clr-primary-green: #028b7e;
+	--clr-primary-light: rgb(255, 207, 83, 0.60);
 	/* Neuter */
 	--clr-neuter-black: #000;
 	--clr-neuter-gray: #595959;
@@ -184,14 +185,28 @@ header .navDots{
 	font-size: var(--fs-semi-medium);
 	border-radius: 100px;
 }
-.center form{
-	display: none;
+.addNewData{
+	width: 100vw;
+	position: absolute;
+	bottom: -50000px;
+	background-color: var(--clr-primary-light);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	transition: all 550ms ease;
+}
+.center .addNewData form{
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	font-size: var(--fs-semi-medium);
 }
-
+#add{
+	display: none;
+}
+#add:checked ~ .addNewData{
+	bottom: 5px;
+}
 .center form input{
 	width: 80vw;
 	height: 100px;

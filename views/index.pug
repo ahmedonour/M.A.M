@@ -20,23 +20,26 @@ html
 			.navDots
 				input#check(type="checkbox" name="check")
 				label(for="check")
-				i.fas.fa-ellipsis-v
+					i.fas.fa-ellipsis-v
 				div.navbtn
 					label(for="check")
-					i.fa-regular.fa-circle-xmark
+						i.fa-regular.fa-circle-xmark
 					label(for="#")  01
-					a.button(href="#") DEPT
+						a.button(href="#") DEPT
 					label(for="#")  02
-					a.button(href="#") OREDERS
+						a.button(href="#") OREDERS
 					
 				
 		.centerContent
 
 			.center
-				form(action="/add" method="post")
-					input(type='text' name='title' placeholder='كلمات')
-					input(type='number' name='count' placeholder='أرقام')
-					button(type='submit') حفظ
+				.addNewData
+					label(for="add")
+						i.fa-regular.fa-circle-xmark
+					form(action="/add" method="post")
+						input(type='text' name='title' placeholder='كلمات')
+						input(type='number' name='count' placeholder='أرقام')
+						button(type='submit') حفظ
 				table
 					tr
 						th التاريخ
@@ -49,11 +52,10 @@ html
 							td= d.count
 							td= d.title
 							td= d.id
-		.addBtn 
-			i.fas.fa-plus(aria-hidden="true")
-			//- a(href="/add") Add
-			//- a(href="/about") About
-			//- a(href="/contact") Contact
+		.addBtn
+			input#add(type="checkbox" name="add")
+			label(for="add") 
+				i.fas.fa-plus(aria-hidden="true")
 		script.
 			$(window).on('load',function(){
 				$('.loader').fadeOut(1000);
