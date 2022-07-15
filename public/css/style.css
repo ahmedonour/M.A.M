@@ -9,6 +9,7 @@
 	--clr-primary-liter: #ffffa8;
 	--clr-primary-green: #028b7e;
 	--clr-primary-light: rgb(255, 207, 83, 0.60);
+	--clr-primary-grediant:  linear-gradient(to right, var(--clr-primary-green), var(--clr-primary-liter));
 	/* Neuter */
 	--clr-neuter-black: #000;
 	--clr-neuter-gray: #595959;
@@ -59,9 +60,9 @@ body #svges{
 	margin-top: 34% ;
 }
 .loader>div{
-	height:100px;
-	width:100px;
-	border:15px solid var(--clr-primary-green);
+	height:400px;
+	width:400px;
+	border: 3rem solid var(--clr-primary-green);
 	border-top-color: var(--clr-primary-liter);
 	position:absolute;
 	margin:auto;
@@ -98,6 +99,11 @@ header p{
 	position: absolute;
 	top: 100px;
 	left: 45%;
+}
+header .pageHaeder{
+	font-size: 5rem;
+	font-family: var(--ff-arabic);
+	color: var(--clr-primary-green);
 }
 header .navDots{
 	background-color: var(--clr-primary-liter);
@@ -148,11 +154,11 @@ header .navDots .navbtn {
 	width: 50vw;
 	height: 15vh;
 	background-color: rgb(255, 255, 168, 0.67);
-	font-family: var(--ff-english);
+	font-family: var(--ff-arabic);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: left;
+	align-items: right;
 	position: absolute;
 	top: -1000px;
 	right: 30px;
@@ -203,6 +209,13 @@ header .navDots .navbtn label{
 	border-radius: 50px;
 	color: var(--clr-neuter-white);
 }
+.centerContent .center table tr .delete-edit{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
 .addBtn .addBtnWrapper .addPlus{
 	display: flex;
 	justify-content: center;
@@ -230,7 +243,7 @@ header .navDots .navbtn label{
 	background-color: var(--clr-primary-light);
 	-webkit-backdrop-filter: blur(5px);
 	backdrop-filter: blur(5px);
-	transition: all 550ms ease;
+	transition: all 400ms ease-in-out;
 	z-index: 5;
 }
 .addBtn .addNewData form{

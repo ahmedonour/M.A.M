@@ -16,7 +16,7 @@ html
 		header 
 			img(src="/img/Logo.png") 
 			p Site
-
+			h1.pageHaeder دُيون
 			.navDots
 				input#check(type="checkbox" name="check")
 				label(for="check")
@@ -25,25 +25,30 @@ html
 					label(for="check")
 						i.fa-regular.fa-circle-xmark
 					label(for="#")  01
-						a.button(href="#") DEPT
+						a.button(href="#") دُيون
 					label(for="#")  02
-						a.button(href="#") OREDERS
-					
+						a.button(href="#") طلبات		
 				
 		.centerContent
 			.center
 				table
 					tr
 						th التاريخ
-						th السعر
-						th ملاحظة
-						th الرقم
+						th المبلغ
+						th الأسم
 					each d in data
 						tr
 							td= d.date
 							td= d.count
 							td= d.title
-							td= d.id
+							input(type='hidden' name='id' value= d.id)
+							td.delete-edit 
+								label(for="delete")
+									a.delete(href="/delete:id") 
+										i.fas.fa-trash-alt
+								label(for="edit")
+									i.fas.fa-pencil 
+							
 		.addBtn
 			.addBtnWrapper
 				input#add(type="checkbox" name="add")
@@ -55,8 +60,8 @@ html
 						i.fa-regular.fa-circle-xmark
 						
 					form(action="/add" method="post")
-						input(type='text' name='title' placeholder='كلمات')
-						input(type='number' name='count' placeholder='أرقام')
+						input(type='text' name='title' placeholder='ألأسم')
+						input(type='number' name='count' placeholder='المبلغ')
 						button(type='submit') حفظ
 
 		script.

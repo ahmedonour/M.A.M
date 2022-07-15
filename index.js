@@ -55,7 +55,13 @@ app.post('/add', (req,res)=>{
 	]);
 	res.redirect('/')
 });
-
+// DELETING A DATA FROM THE DATABASE.
+app.get('/delete:id', (req,res)=>{
+	const id = req.body.id;
+	console.log(id);
+	db.run('DELETE FROM note WHERE rowid = ?',[id]);
+	res.redirect('/')
+});
 //FIRE THE SERVER.
 app.listen(port, ()=>{
 	console.log(`The App is started in http://localhost:${port}`)
