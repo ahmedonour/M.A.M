@@ -26,7 +26,8 @@ function fetchData(req, res, next) {
           id: row.id,
           title: row.title,
 		  count: row.count,
-		  date: row.date,
+	  	  date: row.date,
+	  	  url: '/' + row.id,
       }
     });
 	  res.locals.todos = todos;
@@ -56,11 +57,27 @@ app.post('/add', (req,res)=>{
 	res.redirect('/')
 });
 // DELETING A DATA FROM THE DATABASE.
-app.get('/delete:id', (req,res)=>{
-	const id = req.body.id;
-	console.log(id);
-	db.run('DELETE FROM note WHERE rowid = ?',[id]);
-	res.redirect('/')
+app.post('/:id(\\d+)/delete', function(req, res, next) {
+  db.run('DELETE FROM note WHERE rowid = ?', [
+    req.params.id,
+  ], function(err) {
+    if (err) { return next(err); }
+    return res.redirect('/');
+  });
+});
+// Updating a data in the database.
+app.post('/:id(\\d+)/update', function(req, res, next) {
+	db.run('UPDATE note SET title = ?, count = ? WHERE rowid = ?', [
+	  req.body.title,
+	  req.body.count,
+	  req.params.id,
+	], function(err) {
+	  if (err) { return next(err); }
+	  return res.redirect('/' + (req.body.filter || ''));
+	});
+	console.log(req.body.title,
+		req.body.count,
+		req.params.id);
 });
 //FIRE THE SERVER.
 app.listen(port, ()=>{
