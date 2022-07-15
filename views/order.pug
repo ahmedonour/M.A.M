@@ -4,6 +4,7 @@ html
 		link(rel="stylesheet" href="/css/style.css")
 		link(rel="shortcut icon" href="/img/favicon-0-white.png" type="image/x-icon")
 		script(src="https://kit.fontawesome.com/f3c7bd6f07.js" crossorigin="anonymous")
+		//script(src= "loader.js")	
 		link(rel="manifest" href="/manifest.json")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
 	body
@@ -15,7 +16,7 @@ html
 		header 
 			img(src="/img/Logo.png") 
 			p Site
-			h1.pageHaeder دُيون
+			h1.pageHaeder طلبات
 			.navDots
 				input#check(type="checkbox" name="check")
 				label(for="check")
@@ -36,16 +37,18 @@ html
 					tr
 						th التاريخ
 						th المبلغ
+						th الكمية						
 						th الأسم
 					each d in data
 						tr
 							td= d.date
-							td= d.count
-							td= d.title
+							td= d.amount
+							td= d.quantity
+							td= d.names
 							input(type='hidden' name='id' value= d.id)
 							td.delete-edit 
 								label(for="delete")
-									form(action= d.id + "/delete", method="post")  
+									form(action= d.id + "/deleteOrder", method="post")  
 										button(type="submit") 
 											i.fas.fa-trash-alt
 								input#edit(type="checkbox", name="edit")
@@ -54,9 +57,10 @@ html
 								.editing
 									label(for="edit")
 										i.fa-regular.fa-circle-xmark  
-									form(action= d.id + "/update", method="post")
-										input(type="text" name="title" placeholder="الأسم")
-										input(type="number" name="count" placeholder="المبلغ")
+									form(action= d.id + "/updateOrder", method="post")
+										input(type="text" name="names" placeholder="الأسم")
+										input(type="number" name="amount" placeholder="المبلغ")
+										input(type="number" name="quantity" placeholder="الكمية")
 										button(type="submit")
 											i.fas.fa-pencil  
 
@@ -70,9 +74,10 @@ html
 					label.addXmark(for="add")
 						i.fa-regular.fa-circle-xmark
 						
-					form(action="/add" method="post")
-						input(type='text' name='title' placeholder='ألأسم')
-						input(type='number' name='count' placeholder='المبلغ')
+					form(action="/addOrder" method="post")
+						input(type='text' name='names' placeholder='ألأسم')
+						input(type='number' name='amount' placeholder='المبلغ')
+						input(type='number' name='quantity' placeholder='الكمية')
 						button(type='submit') حفظ
 
 		script.

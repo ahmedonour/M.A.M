@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+:root{
+	/* Font Family */
+	--ff-arabic: 'Aref Ruqaa', serif;
+	--ff-english:  'Major Mono Display', monospace;
+	/* Colors */
+	--clr-primary: #ffcf53;
+	--clr-primary-liter: #ffffa8;
+	--clr-primary-green: #028b7e;
+	--clr-primary-light: rgb(255, 207, 83, 0.60);
+	--clr-primary-grediant:  linear-gradient(to right, var(--clr-primary-green), var(--clr-primary-liter));
+	/* Neuter */
+	--clr-neuter-black: #000;
+	--clr-neuter-gray: #595959;
+	--clr-neuter-white: #fff;
+	/* Font Size */
+	--fs-small: 1rem;
+	--fs-medium: 1.5;
+	--fs-semi-medium: 2rem;
+	--fs-big: 3rem;
+	/* Box-Shadow */
+	--bs-wide: 10px 10px 4px rgba(0, 0, 0, 0.25);
+	--bs-blur: 0px -7px 20px rgba(0, 0, 0, 0.25);
+	--bs-input: 7px 7px 4px rgba(0, 0, 0, 0.25);
+}
+body{
+    background-color: var(--clr-primary);
+}
+.loader{
+	height:100vh;
+	width:100vw;
+	overflow:hidden;
+	background-color: var(--clr-primary);
+	position: fixed;
+	z-index: 2;
+}
+.loader h1{
+	color: var(--clr-primary-white);
+	font-size: 5rem;
+	font-family: var(--ff-english);
+	text-align: center;
+	margin-top: 34% ;
+}
+.loader>div{
+	height:400px;
+	width:400px;
+	border: 3rem solid var(--clr-primary-green);
+	border-top-color: var(--clr-primary-liter);
+	position:absolute;
+	margin:auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	border-radius:50%;
+	animation:spin 1.5s infinite linear;
+}
+@keyframes spin{
+	100%{
+		transform:rotate(360deg);
+	}
+}
+/* END Page Loader */
+/* Header */
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 200px;
+	margin-bottom: 5rem;
+}
+header img{
+	width: 50%;
+}
+header p{
+	background-color: var(--clr-neuter-black);
+	color: var(--clr-neuter-white);
+	font-family: var(--ff-english);
+	margin: 1rem;
+	font-size: 2rem;
+	position: absolute;
+	top: 100px;
+	left: 45%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content a{
+    width: 50vw;
+    height: 10vh;
+    margin-bottom: 2rem;
+    background-color: var(--clr-primary-green);
+    font-family: var(--ff-arabic);
+    color: var(--clr-primary);
+    text-align: center;
+    text-decoration: none;
+    font-size: 5rem;
+    border-radius: 100px;
+}
+/* Erro Message */
+@media screen and (min-width:480px) {
+	*{
+		display: none;
+	}
+	*::after{
+		content: 'This Websit built For Mobile View Only';
+		color: red;
+		font-size: 5rem;
+		font-family: var(--ff-english);
+	}
+}

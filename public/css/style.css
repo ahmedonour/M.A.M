@@ -152,7 +152,7 @@ header .navDots .navbtn label .fa-circle-xmark:hover{
 }
 header .navDots .navbtn {
 	width: 50vw;
-	height: 15vh;
+	height: 25vh;
 	background-color: rgb(255, 255, 168, 0.67);
 	font-family: var(--ff-arabic);
 	display: flex;
@@ -383,3 +383,15 @@ header .navDots .navbtn label{
 	left: 0px;
 }
 /* END Main */
+/* Error Message */
+@media screen and (min-width:480px) {
+	*{
+		display: none;
+	}
+	*::after{
+		content: 'This Websit built For Mobile View Only';
+		color: red;
+		font-size: 5rem;
+		font-family: var(--ff-english);
+	}
+}

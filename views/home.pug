@@ -1,0 +1,30 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title M.A.M || Home Page 
+        link(rel="stylesheet" href="/css/home.css")
+        link(rel="shortcut icon" href="/img/favicon-0-white.png" type="image/x-icon")
+        script(src="https://kit.fontawesome.com/f3c7bd6f07.js" crossorigin="anonymous")
+        link(rel="manifest" href="/manifest.json")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    body
+        .loader
+            div
+            h1 M.A.M
+        header 
+            img(src="/img/Logo.png", alt="")
+            p Site
+
+        .content 
+            a(href="/dept") دُيون 
+            a(href="/order") طلبات
+        script.
+            $(window).on('load',function(){
+                $('.loader').fadeOut(1000);
+                $('.contents').fadeln(1000);
+                });
+        //- script.
+        //- if ('serviceWorker' in navigator){
+        //-         navigator.serviceWorker.register('/service-worker.js');
+        //-         };
