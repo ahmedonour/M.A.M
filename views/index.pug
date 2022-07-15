@@ -31,15 +31,7 @@ html
 					
 				
 		.centerContent
-
 			.center
-				.addNewData
-					label(for="add")
-						i.fa-regular.fa-circle-xmark
-					form(action="/add" method="post")
-						input(type='text' name='title' placeholder='كلمات')
-						input(type='number' name='count' placeholder='أرقام')
-						button(type='submit') حفظ
 				table
 					tr
 						th التاريخ
@@ -53,9 +45,20 @@ html
 							td= d.title
 							td= d.id
 		.addBtn
-			input#add(type="checkbox" name="add")
-			label(for="add") 
-				i.fas.fa-plus(aria-hidden="true")
+			.addBtnWrapper
+				input#add(type="checkbox" name="add")
+				label.addPlus(for="add") 
+					i.fas.fa-plus(aria-hidden="true")
+				
+				div.addNewData
+					label.addXmark(for="add")
+						i.fa-regular.fa-circle-xmark
+						
+					form(action="/add" method="post")
+						input(type='text' name='title' placeholder='كلمات')
+						input(type='number' name='count' placeholder='أرقام')
+						button(type='submit') حفظ
+
 		script.
 			$(window).on('load',function(){
 				$('.loader').fadeOut(1000);
