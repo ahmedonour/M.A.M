@@ -4,7 +4,7 @@
   "description": "a number traking app",
   "main": "index.js",
   "scripts": {
-    "ono": "nodemon index.js"
+    "dev": "node index.js"
   },
   "author": "Ahmed Onour",
   "license": "MIT",
