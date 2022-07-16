@@ -29,8 +29,8 @@
   }
 ],
 
-	"theme_color": "#000000",
-	"background_color": "#ff0000",
+	"theme_color": "#ffcf53",
+	"background_color": "#ffcf53",
 	"display": "fullscreen",
 	"orientation": "portrait"
 }
