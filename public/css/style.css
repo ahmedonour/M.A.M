@@ -377,11 +377,12 @@ header .navDots .navbtn label{
 	color: var(--clr-primary-white);
 	cursor: pointer;
 }
-.addBtn .addBtnWrapper .addNewData .addXmark i{
-	font-size: 1.5rem;
+.addBtn .addBtnWrapper .addNewData form .addXmark i{
+	font-size: 2rem;
 	position: fixed;
-	top: 20px;
-	left: 20px;
+	top: 30px;
+	left: 40px;
+	color: var(--clr-neuter-white);
 }
 #add{
 	display: none;
