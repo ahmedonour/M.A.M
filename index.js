@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var sqlite = require("sqlite3");
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 const db = new sqlite.Database('./db/main.db');
 
