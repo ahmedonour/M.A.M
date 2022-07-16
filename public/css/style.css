@@ -389,16 +389,44 @@ header .navDots .navbtn label{
 #add:checked ~ .addNewData{
 	left: 0px;
 }
+.errorbox{
+	display:none;
+}
 /* END Main */
 /* Error Message */
 @media screen and (min-width:480px) {
-	*{
+	.centerContent, header, .addBtn{
 		display: none;
 	}
-	*::after{
+	.errorbox{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--clr-primary-light);
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
+		transition: all 400ms ease-in-out;
+		z-index: 5;
+		padding: 3rem;
+	}
+	.errorbox h1{
+		font-family: var(--ff-english);
+		font-size: var(--fs-big);
+		color: var(--clr-primary-green);
+	}
+	.errorbox p{
+		text-align: right;
+		font-family: var(--ff-arabic);
+		font-size: 2rem;
+		color: var(--clr-primary-white);
+	}
+	.errorbox::after{
 		content: 'This Websit built For Mobile View Only';
 		color: red;
-		font-size: 5rem;
+		font-size: 2rem;
 		font-family: var(--ff-english);
 	}
 }

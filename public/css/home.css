@@ -101,12 +101,37 @@ header p{
     font-size: 2.5rem;
     border-radius: 100px;
 }
+.errorbox{
+	display:none;
+}
 /* Erro Message */
 @media (min-width:480px) {
-	body{
+	.content{
 		display: none;
 	}
-	body::after{
+	.errorbox{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--clr-primary-light);
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
+		transition: all 400ms ease-in-out;
+		z-index: 5;
+	}
+	.errorbox h1{
+		font-family: var(--ff-english);
+		font-size: var(--fs-big);
+		color: var(--clr-primary-green);
+	}
+	.errorbox p{
+		font-family: var(--ff-arabic);
+		font-size: var(--fs-medium);
+		color: var(--clr-primary-white);
+	}
+	.errorbox::after{
 		content: 'This Websit built For Mobile View Only';
 		color: red;
 		font-size: 5rem;
