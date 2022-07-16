@@ -54,15 +54,15 @@ body #svges{
 }
 .loader h1{
 	color: var(--clr-primary-white);
-	font-size: 5rem;
+	font-size: 4rem;
 	font-family: var(--ff-english);
 	text-align: center;
 	margin-top: 34% ;
 }
 .loader>div{
-	height:400px;
-	width:400px;
-	border: 3rem solid var(--clr-primary-green);
+	height:200px;
+	width:200px;
+	border: 1rem solid var(--clr-primary-green);
 	border-top-color: var(--clr-primary-liter);
 	position:absolute;
 	margin:auto;
@@ -84,24 +84,25 @@ header{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 200px;
-	margin-bottom: 5rem;
+	height: 100px;
+	margin-bottom: 1.5rem;
 }
 header img{
 	width: 50%;
+	height: 70%;
 }
 header p{
 	background-color: var(--clr-neuter-black);
 	color: var(--clr-neuter-white);
 	font-family: var(--ff-english);
 	margin: 1rem;
-	font-size: 2rem;
+	font-size: 1rem;
 	position: absolute;
-	top: 100px;
-	left: 45%;
+	top: 40px;
+	left: 35%;
 }
 header .pageHaeder{
-	font-size: 5rem;
+	font-size: 2rem;
 	font-family: var(--ff-arabic);
 	color: var(--clr-primary-green);
 }
@@ -110,13 +111,13 @@ header .navDots{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50px;
 }
 header .navDots .navbtn label .button {
 	padding: 10px 30px;
-	font-size: 3rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	color: var(--clr-black);
 	border-bottom: 2px solid var(--clr-black);
@@ -132,14 +133,14 @@ header .navDots .navbtn label a.button {
 	text-decoration: none;
 }
 header .navDots label .fa-ellipsis-v{
-	font-size: 4rem;
+	font-size: 2rem;
 	padding: 1rem;
 }
 header .navDots .navbtn label .fa-circle-xmark{
 	position: absolute;
 	top: 10px;
 	left: 15px;
-	font-size: 3rem;
+	font-size: 2rem;
 }
 header .navDots .navbtn label .fa-circle-xmark:hover{
 	color: red;
@@ -169,7 +170,7 @@ header .navDots .navbtn {
 	transition: all 550ms ease;
 }
 header .navDots .navbtn label{
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	padding-top: 1rem;
 	padding-left: 2rem;
@@ -192,21 +193,21 @@ header .navDots .navbtn label{
 }
 .centerContent .center table{
 	border-radius: 50px;
-	padding: 2rem;
+	padding: 1rem;
 	width: 90vw;
 	/* height: 100%; */
 	background-color: var(--clr-primary-liter);
 	overflow : scroll;
 	font-family: var(--ff-arabic);
-	font-size: var(--fs-semi-medium);
+	font-size: var(--fs-small);
 	text-align: center;
 }
 .centerContent .center table tr td{
-	padding: 1rem;
+	padding: .5rem;
 	width: 25%;
 	background-color: var(--clr-primary-green);
 	gap: 0;
-	border-radius: 50px;
+	border-radius: 20px;
 	color: var(--clr-neuter-white);
 }
 .centerContent .center table tr .delete-edit{
@@ -219,9 +220,10 @@ header .navDots .navbtn label{
 
 .centerContent .center table tr .delete-edit .editing{
 	width: 100vw;
-	height: 30vh;
+	height: 50vh;
 	position: fixed;
 	left: -10000px;
+	top: 0px;
 	background-color: var(--clr-primary-light);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
@@ -241,7 +243,7 @@ header .navDots .navbtn label{
 	position: absolute;
 	top: 30px;
 	left: 30px;
-	font-size: 4rem;
+	font-size: 2rem;
 }
 .centerContent .center table tr .delete-edit .editing label .fa-circle-xmark:active{
 	color: red;
@@ -257,28 +259,30 @@ header .navDots .navbtn label{
 }
 .centerContent .center table tr .delete-edit .editing form input{
 	width: 80vw;
-	height: 100px;
+	height: 10%;
 	border: none;
-	font-size: 4rem;
+	font-size: 1rem;
 	outline: none;
 	border-radius: 50px;
 	background-color: white;
 	color: black;
-	padding: 2rem;
+	padding: 1rem;
 	margin: 1.5rem;
 	font-family: var(--ff-arabic);
 	text-align: right;
-	box-shadow: 4px 4px 5px 0px #000;
+	box-shadow: var(--bs-input);
 }
 .centerContent .center table tr .delete-edit .editing form button{
 	width: 80vw;
-	height: 100px;
+	height: 10%;
 	border: 5px solid var(--clr-primary-white);
-	font-size: 3rem;
+	font-size: 1rem;
 	outline: none;
 	border-radius: 50px;
 	font-family: var(--ff-arabic);
 	text-align: center;
+	padding: 1rem;
+	box-shadow: var(--bs-input);
 }
 .centerContent .center table tr .delete-edit .editing form button:hover{
 	background-color: green;
@@ -287,17 +291,17 @@ header .navDots .navbtn label{
 }
 .centerContent .center table tr .delete-edit label form button{
 	background: none;
-	font-size: 4rem;
+	font-size: 2rem;
 	color: var(--clr-neuter-white);
 	border: none;
 	outline: none;
-	padding-bottom: 3rem;
+	padding: 1rem;
 }
 .centerContent .center table tr .delete-edit label form button:active{
 	color: red;
 }
 .centerContent .center table tr .delete-edit label .fa-pencil{
-	font-size: 4rem;
+	font-size: 2rem;
 	padding: 1rem;
 }
 .centerContent .center table tr .delete-edit label .fa-pencil:active{
@@ -307,8 +311,8 @@ header .navDots .navbtn label{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 10rem;
-	height: 10rem;
+	width: 5rem;
+	height: 5rem;
 	border-radius: 100px;
 	background-color: var(--clr-primary-green);
 	position: fixed;
@@ -318,11 +322,11 @@ header .navDots .navbtn label{
 }
 .addBtn .addBtnWrapper .addPlus .fa-plus{
 	color: var(--clr-primary);
-	font-size: 7rem;
+	font-size: 3rem;
 }
 .addBtn .addNewData{
 	width: 100vw;
-	height: 30vh;
+	height: 50vh;
 	position: fixed;
 	bottom: 0px;
 	left: -50000px; 
@@ -334,6 +338,7 @@ header .navDots .navbtn label{
 }
 .addBtn .addNewData form{
 	width: 100vw;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -342,28 +347,30 @@ header .navDots .navbtn label{
 }
 .addBtn .addBtnWrapper .addNewData form input{
 	width: 80vw;
-	height: 100px;
+	height: 10%;
 	border: none;
-	font-size: 4rem;
+	font-size: 1rem;
 	outline: none;
 	border-radius: 50px;
 	background-color: white;
 	color: black;
-	padding: 2rem;
+	padding: 1.5rem;
 	margin: 1.5rem;
 	font-family: var(--ff-arabic);
 	text-align: right;
-	box-shadow: 4px 4px 5px 0px #000;
+	box-shadow: var(--bs-input);
 }
 .addBtn .addBtnWrapper .addNewData form button{
 	width: 80vw;
-	height: 100px;
+	height: 10%;
 	border: 5px solid var(--clr-primary-white);
-	font-size: 3rem;
+	font-size: 1rem;
 	outline: none;
 	border-radius: 50px;
 	font-family: var(--ff-arabic);
 	text-align: center;
+	padding-bottom: 1rem;
+	box-shadow: var(--bs-input);
 }
 .addBtn .addBtnWrapper.addNewData form button:hover{
 	background-color: green;
@@ -371,7 +378,7 @@ header .navDots .navbtn label{
 	cursor: pointer;
 }
 .addBtn .addBtnWrapper .addNewData .addXmark i{
-	font-size: 4rem;
+	font-size: 1.5rem;
 	position: fixed;
 	top: 20px;
 	left: 20px;
