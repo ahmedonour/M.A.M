@@ -362,7 +362,7 @@ header .navDots .navbtn label{
 }
 .addBtn .addBtnWrapper .addNewData form button{
 	width: 80vw;
-	height: 10%;
+	height: 15%;
 	border: 5px solid var(--clr-primary-white);
 	font-size: 1rem;
 	outline: none;
